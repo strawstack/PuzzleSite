@@ -10,13 +10,15 @@
     height: 100%;
 }
 .LeftSide {
-    display: grid; /* Center and expand the child GridContainer */
+    display: flex; /* Center and expand the child GridContainer */
+    justify-content: center;
+    align-items: center;
     background: _yellow;
 }
 .GridContainer {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 90px);
+    grid-template-columns: repeat(4, 80px);
 }
 
 .RightSide {
@@ -28,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .SiteDescription {
     max-width: 400px;
@@ -35,10 +38,15 @@
     color: _yellow;
     padding: 0px 10px;
 }
+.NavMenuContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 .NavMenu {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 50px 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
 }
 
 .aqua {

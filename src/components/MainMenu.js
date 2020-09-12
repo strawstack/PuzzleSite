@@ -113,11 +113,12 @@ class MainMenu extends React.Component {
                             Some puzzles may be difficult to play if screen width is less than 600px. Site works best on desktop.
                         </div>
                     </div>
-                    <div className={styles.NavMenu}>
-                        <div></div>
-                        <MenuIcon name="unknown" className={styles.yellow} />
-                        <MenuIcon name="settings" className={styles.orange} />
-                        <MenuIcon name="about" className={styles.blue} />
+                    <div className={styles.NavMenuContainer}>
+                        <div className={styles.NavMenu}>
+                            <MenuIcon name="unknown" className={styles.yellow} />
+                            <MenuIcon name="settings" className={styles.orange} />
+                            <MenuIcon name="about" className={styles.blue} />
+                        </div>
                     </div>
                 </div>
             </div>
