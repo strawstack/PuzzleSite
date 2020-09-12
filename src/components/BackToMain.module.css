@@ -1,0 +1,20 @@
+@value _grey: #555;
+
+.BackToMain {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.Link {
+    color: _grey;
+    opacity: 0.4;
+    text-decoration: none;
+    transition: opactiy 0.5s;
+}
+.Link.Light {
+    color: #eee;
+}
+.Link:hover {
+    opacity: 1;
+}

@@ -1,0 +1,40 @@
+@value _darkBlue: #3B3B58;
+@value _blue: #7392B7;
+@value _lightBlue: #B3C5D7;
+
+.Settings {
+    height: 100%;
+    background: _darkBlue;
+}
+.Title {
+    padding: 30px;
+    font-size: 2.5rem;
+    color: _blue;
+}
+.Text {
+    font-size: 1.4rem;
+    color: _blue;
+    margin-right: 30px;
+    user-select: none;
+}
+.Button {
+    color: _blue;
+    border: 2px solid _blue;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.2s, background 0.2s;
+}
+.Button:hover {
+    cursor: pointer;
+    color: _lightBlue;
+    background: _blue;
+}
+.MenuContainer {
+    display: flex;
+    justify-content: center;
+}
+.MenuItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

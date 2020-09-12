@@ -1,0 +1,58 @@
+@value _red5: #EF6351;
+@value _red4: #F38375;
+@value _red3: #F7A399;
+@value _red2: #FBC3BC;
+@value _red1: #FFE3E0;
+
+@value baseFont: 1.2rem;
+
+.Nano {
+    height: 100%;
+    background: _red1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: baseFont;
+}
+.PuzzleContainer {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: repeat(11, 60px);
+    grid-template-columns: repeat(10, 60px);
+}
+.RuleCell {
+    border-right: 1px solid _red2;
+    border-bottom: 1px solid _red2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: _red4;
+    user-select: none;
+}
+.GameCell {
+    border-right: 1px solid _red2;
+    border-bottom: 1px solid _red2;
+    background: _red3;
+    transition: background 0.5s;
+}
+.GameCell:hover {
+    cursor: pointer;
+    background: _red4;
+}
+.Selected {
+    background: _red5 !important;
+}
+.top {
+    border-top: 1px solid _red2;
+}
+.left {
+    border-left: 1px solid _red2;
+}
+.right {
+    border-right: 1px solid _red2;
+}
+.bot {
+    border-bottom: 1px solid _red2;
+}

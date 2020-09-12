@@ -1,0 +1,42 @@
+@value _sand: #F0B67F;
+@value _coffee: #34252F;
+@value _darkAqua: #335C67;
+@value _purple: #BE97C6;
+@value _green: #537A5A;
+
+.About {
+    height: 100%;
+    background: _sand;
+}
+.Title {
+    padding: 30px;
+    color: _coffee;
+}
+.TextContainer {
+    display: flex;
+    justify-content: center;
+}
+.Text {
+    font-size: 1.5rem;
+    color: _coffee;
+    max-width: 400px;
+}
+.Text>p {
+    padding: 3px 0px;
+}
+.ImageContainer {
+    margin: 20px;
+}
+.ImageContainer>img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+}
+.Link {
+    text-decoration: none;
+    color: _purple;
+    transition: color 0.2s;
+}
+.Link:hover {
+    color: white;
+}

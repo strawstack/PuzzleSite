@@ -1,0 +1,113 @@
+@value _one_dirt: #CB997E;
+@value _two_peach: #FFCEB1;
+@value _three_pale: #FFF1E6;
+@value _four_brown: #DDBEA9;
+@value _five_green: #A5A58D;
+@value _six_slate: #818181;
+@value _seven_blue: #A9D7DD;
+@value _eight_purple: #A58DA3;
+@value _nine_prune: #A4A4B7;
+@value _background: #F0EFEB;
+@value _border: #D9D9D9;
+
+.Color {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: _background;
+}
+.PuzzleContainer {
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+.Cell {
+    border-right: 2px solid _border;
+    border-bottom: 2px solid _border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Cell:hover {
+    cursor: pointer;
+    background: _border;
+    opacity: 0.8;
+}
+.Fixed {
+    cursor: not-allowed !important;
+    background: _background !important;
+    opacity: 1 !important;
+}
+.Circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.ColorBar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 2px solid _border;
+    height: 50px;
+    width: 450px;
+    position: absolute;
+    bottom: -70px;
+    left: 25px;
+}
+.ChoiceBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Choice {
+    background: blue;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+.ChoiceBox:first-child .Choice {
+    border-radius: 0px;
+}
+.Choice.Available:hover {
+    cursor: pointer;
+    border: 3px solid #333;
+    box-sizing: border-box;
+}
+.Choice.High {
+    border: 3px solid #333;
+    box-sizing: border-box;
+}
+
+/* Borders */
+.Cell:nth-child(3n) { /* thick columns */
+    border-right: 4px solid _border;
+}
+.Cell:nth-child(9n) { /* exclude thick column */
+    border-right: 2px solid _border;
+}
+.Cell:nth-child(n + 19) { /* thick row */
+    border-bottom: 4px solid _border;
+}
+.Cell:nth-child(n + 28) { /* exclude thick row */
+    border-bottom: 2px solid _border;
+}
+.Cell:nth-child(n + 46) { /* thick row */
+    border-bottom: 4px solid _border;
+}
+.Cell:nth-child(n + 55) { /* exclude thick row */
+    border-bottom: 2px solid _border;
+}
+.Cell:nth-child(9n + 1) { /* far left side */
+    border-left: 2px solid _border;
+}
+.Cell { /* top side */
+    border-top: 2px solid _border;
+}
+.Cell:nth-child(n + 10) { /* top side */
+    border-top: none;
+}

@@ -1,0 +1,96 @@
+@value _blue: #355070;
+@value _purple: #6D597A;
+@value _darkRed: #B56576;
+@value _red: #E56B6F;
+@value _orange: #EAAC8B;
+
+@value cellSize: 60px;
+@value cellSizeAlmost: 50px;
+@value pieceSize: 3rem;
+
+.Chess {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(234,172,139,1) 0%, rgba(181,101,118,1) 100%);
+    font-family: "Courier New", Courier, monospace;
+}
+.PuzzleContainer {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(8, cellSize);
+    grid-template-columns: repeat(8, cellSize);
+}
+.Cell {
+    position: relative;
+    background: _orange;
+}
+.Cell.Black {
+    background: _blue;
+}
+.Cell:hover {
+    cursor: pointer;
+}
+.TextArea {
+    margin-top: 30px;
+    background: _blue;
+    height: 100px;
+    width: 480px; /* 8 * cellSize */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: _orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.Piece {
+    position: absolute;
+    height: cellSize;
+    width: cellSize;
+    font-size: pieceSize;
+    font-weight: bold;
+    -webkit-text-stroke: 2px _red;
+    transition: top 1s, left 1s;
+}
+.Piece>.Text {
+    position: absolute;
+    height: cellSize;
+    width: cellSize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+}
+.Piece>.Circle, .Marker {
+    position: absolute;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    height: cellSizeAlmost;
+    width: cellSizeAlmost;
+    z-index: 1;
+    transition: background 0.2s;
+}
+.Piece>.Circle.Selected {
+    background: _red;
+    opacity: 0.8;
+}
+.Piece>.Circle:hover {
+    cursor: pointer;
+    background: _red;
+    opacity: 0.8;
+}
+.Marker:hover {
+    cursor: pointer;
+    background: _red;
+    opacity: 0.8;
+}
+.White {
+    color: _orange;
+}
+.Black {
+    color: _blue;
+}

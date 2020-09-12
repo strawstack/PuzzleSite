@@ -1,0 +1,43 @@
+@value _blue: #264653;
+@value _aqua: #309084;
+@value _yellow: #E9C46A;
+@value _orange: #F4A261;
+@value _red: #E76F51;
+
+@value dotSize: 60px;
+@value dotSizeHalf: 30px;
+
+.PuzzleIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LinkArea {
+    display: grid;
+    grid-template-rows: dotSize auto;
+    grid-template-columns: dotSize;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: border-radius 0.5s, text-shadow 0.5s;
+}
+.LinkArea:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    text-shadow: 0px 0px 10px _red;
+}
+.Star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: _yellow;
+    border-radius: inherit;
+    background: _red;
+}
+.Hide { /* Hides star and also entire secret puzzle */ 
+    display: none;
+}
+.Name {
+    color: _red;
+    text-shadow: inherit;
+}

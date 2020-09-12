@@ -1,0 +1,85 @@
+@value _red: #E63946;
+@value _coldWhite: #F1FAEE;
+@value _lightBlue: #A8DADC;
+@value _medBlue: #457B9D;
+@value _darkBlue: #1D3557;
+
+@value cellSize: 70px;
+@value wallSize: 10px;
+@value dotSize: 40px;
+
+.Maze {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: _coldWhite;
+}
+.PuzzleContainer {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(11, auto);
+    grid-template-columns: repeat(11, auto);
+    grid-gap: 10px;
+}
+.Cell {
+    background: _lightBlue;
+    border-radius: 50%;
+    height: cellSize;
+    width: cellSize;
+}
+.Cell.Select:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.VWall {
+    background: _red;
+    height: cellSize;
+    width: wallSize;
+    border-radius: 5px;
+    transition: height 0.5s;
+}
+.HWall {
+    background: _red;
+    height: wallSize;
+    width: cellSize;
+    border-radius: 5px;
+    transition: width 0.5s;
+}
+.VWall.OpenWall {
+    height: 0px;
+}
+.HWall.OpenWall {
+    width: 0px;
+}
+.Space {
+
+}
+.Goal {
+    position: absolute;
+    top: 0px; /* (cellSize - dotSize) / 2 + row * 100 */
+    left: 500px; /* (cellSize - dotSize) / 2 + col * 100 */
+    height: cellSize;
+    width: cellSize;
+    background: _medBlue;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.GoalInner {
+    position: absolute;
+    top: 16px; /* (cellSize - dotSize) / 2 + row * 100 */
+    left: 16px; /* (cellSize - dotSize) / 2 + col * 100 */
+    height: 38px; /* dotSize - 6px */
+    width: 38px;
+    background: _lightBlue;
+    border-radius: 50%;
+}
+.Player {
+    position: absolute;
+    height: dotSize;
+    width: dotSize;
+    background: _medBlue;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+}

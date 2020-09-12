@@ -1,0 +1,49 @@
+@value _green3: #386641;
+@value _green2: #6A994E;
+@value _green1: #A7C957;
+@value _offWhite: #F2E8CF;
+@value _red: #BC4749;
+
+.Search {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: _offWhite;
+}
+.PuzzleContainer {
+
+}
+.Cell {
+    height: 100px;
+    width: 350px;
+    background: _red;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Cell:nth-child(2) {
+    margin: 30px 0px;
+}
+.Info {
+    background: _offWhite;
+    border: 10px solid _red;
+    color: _red;
+}
+.Input {
+    background: _green1;
+    border: 10px solid _green2;
+    color: _green2;
+
+}
+.Pad {
+    padding-right: 5px;
+    user-select: none;
+}
+.Pad:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

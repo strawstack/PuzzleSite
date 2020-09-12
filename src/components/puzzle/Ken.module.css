@@ -1,0 +1,66 @@
+@value _blue: #D8E2DC;
+@value _pink: #FFE5D9;
+@value _rose: #FFCAD4;
+@value _red: #F4ACB7;
+@value _olive: #9D8189;
+
+.Ken {
+    height: 100%;
+    background: _pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.PuzzleContainer {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-rows: 1fr 5px 1fr 5px 1fr 5px 1fr;
+    grid-template-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
+}
+.Cell {
+    background: _blue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+.Line {
+
+}
+.LineRed {
+    background: _red;
+}
+.Point {
+
+}
+.PointRed {
+    background: _red;
+}
+.Cell.Right {
+    border-right: 5px solid _red;
+}
+.Cell.Bottom {
+    border-bottom: 5px solid _red;
+}
+.Total {
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: _red;
+    user-select: none;
+}
+.Cell span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: _pink;
+    -webkit-text-stroke: 2px _olive;
+    user-select: none;
+}
+.Cell:hover {
+    cursor: pointer;
+    opacity: 0.65;
+}

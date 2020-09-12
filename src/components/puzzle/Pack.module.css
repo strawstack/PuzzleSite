@@ -1,0 +1,72 @@
+@value _blue5: #21295C;
+@value _blue4: #1B3B6F;
+@value _blue3: #065A82;
+@value _blue2: #1C7293;
+@value _blue1: #9EB3C2;
+
+@value _cellSize: 65px;
+@value _cellPad: 10px;
+
+.Pack {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: _blue3;
+    z-index: 1;
+}
+.PuzzleContainer {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(6, _cellSize);
+    grid-template-columns: repeat(6, _cellSize);
+    grid-gap: _cellPad;
+    padding: _cellPad;
+    border: _cellPad solid _blue2;
+    z-index: 2;
+}
+.Cell {
+    background: _blue2;
+    z-index: 3;
+    pointer-events: none;
+}
+.Exit {
+    position: absolute;
+    height: _cellSize;
+    width: _cellSize;
+    top: 160px; /* 3 * _cellPad + 2 * _cellSize */
+    right: -60px; /* _cellSize - _cellPad/2 */
+    background: _blue3;
+    z-index: 4;
+}
+.Block {
+    position: absolute;
+    z-index: 5;
+    background: _blue4;
+    opacity: 0.8;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+}
+.Block.Main {
+    background: _blue1;
+}
+.Block:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+.Block.H.H2 {
+    height: 65px;
+    width: 140px; /* 2 * _cellSize + _cellPad */
+}
+.Block.H.H3 {
+    height: 65px;
+    width: 215px; /* 3 * _cellSize + 2 * _cellPad */
+}
+.Block.V.V2 {
+    height: 140px;
+    width: 65px;
+}
+.Block.V.V3 {
+    height: 215px;
+    width: 65px;
+}

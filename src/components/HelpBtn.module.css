@@ -1,0 +1,56 @@
+@value _grey: #555;
+@value textHeight: 50px;
+
+.HelpBtn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    transition: bottom 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none;
+}
+.HelpBtn.Open {
+    bottom: 10px;
+}
+.Btn {
+    color: _grey;
+    opacity: 0.4;
+    text-decoration: none;
+    transition: opactiy 0.5s;
+    font-size: 1.5rem;
+    border: 2px solid _grey;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    pointer-events: all;
+}
+.Btn.Light {
+    color: #eee;
+    border: 2px solid #eee;
+}
+.Btn:hover {
+    cursor: pointer;
+    opacity: 1;
+    background: rgba(55, 55, 55, 0.1);
+}
+.HelpText {
+    margin-top: 10px;
+    height: 0px;
+    width: 300px;
+    overflow-y: scroll;
+    transition: height 0.5s;
+    background: rgba(55, 55, 55, 0.1);
+    color: _grey;
+    font-size: 1.2rem;
+}
+.HelpText.Light {
+    color: #eee;
+}
+.HelpText.Open {
+    height: textHeight;
+}

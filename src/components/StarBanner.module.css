@@ -1,0 +1,67 @@
+@value _blue: #264653;
+@value _aqua: #309084;
+@value _yellow: #E9C46A;
+@value _orange: #F4A261;
+@value _red: #E76F51;
+
+@value baseFont: 1.2rem;
+
+.StarBanner {
+    position: absolute;
+    height: 120px;
+    width: 300px;
+    top: 50px;
+    left: 0px; /* Horizontal Center */
+    right: 0px; /* Horizontal Center */
+    margin-left: auto; /* Horizontal Center */
+    margin-right: auto; /* Horizontal Center */
+    transition: top 1.2s;
+    transition-timing-function: ease;
+    background: _red;
+    color: _yellow;
+    font-size: baseFont;
+    padding: 30px;
+    border-radius: 4px;
+    z-index: 10;
+}
+.StarBanner.Hide {
+    top: -250px; /* height: 180 + top: 50 */
+}
+.StarBanner>h2 {
+    padding-bottom: 10px;
+}
+.StarContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.Star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    text-shadow: 0px 0px 10px _orange;
+}
+.Info {
+
+}
+.Dismiss {
+    position: absolute;
+    border-radius: 4px;
+    z-index: 11;
+    background: _red;
+    height: 40px;
+    width: 60px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: _yellow;
+    font-size: 1.5rem;
+    bottom: 0px;
+    right: 0px;
+}
+.Dismiss:hover {
+    cursor: pointer;
+    background: _yellow;
+    color: _red;
+}

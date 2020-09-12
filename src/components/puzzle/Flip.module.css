@@ -1,0 +1,26 @@
+.Flip {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(58,90,64,1) 0%, rgba(58,90,64,1) 50%, rgba(88,129,87,1) 50%, rgba(88,129,87,1) 100%);
+}
+.PuzzleContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 120px);
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 10px;
+    background: #A3B18A;
+    border: 10px solid #A3B18A;
+}
+.Cell {
+    background: #344E41;
+}
+.Cell.Highlight {
+    background: #DAD7CD;
+}
+.Cell:hover {
+    cursor: pointer;
+    border: 5px solid #588157;
+}
