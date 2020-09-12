@@ -1,11 +1,11 @@
-@value dotSize: 60px;
-@value dotSizeHalf: 30px;
-
 @value _blue: #264653;
 @value _aqua: #309084;
 @value _yellow: #E9C46A;
 @value _orange: #F4A261;
 @value _red: #E76F51;
+
+@value dotSize: 70px;
+@value dotSizeHalf: 30px;
 
 .MenuIcon {
     display: flex;

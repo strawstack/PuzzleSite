@@ -34,7 +34,7 @@
     border-radius: inherit;
     background: _red;
 }
-.Hide { /* Hides star and also entire secret puzzle */ 
+.Hide { /* Hides star and also entire secret puzzle */
     display: none;
 }
 .Name {
