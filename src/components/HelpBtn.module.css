@@ -1,5 +1,5 @@
 @value _grey: #555;
-@value textHeight: 50px;
+@value textHeight: 100px;
 
 .HelpBtn {
     position: absolute;
@@ -47,6 +47,8 @@
     background: rgba(55, 55, 55, 0.1);
     color: _grey;
     font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
 }
 .HelpText.Light {
     color: #eee;
