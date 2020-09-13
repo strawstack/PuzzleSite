@@ -48,6 +48,9 @@
     border-radius: 50%;
     pointer-events: none;
 }
+.Square {
+    border-radius: 8px;
+}
 .ColorBar {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -69,6 +72,9 @@
     width: 30px;
     border-radius: 50%;
     border: 1px solid #333;
+}
+.Choice.Square {
+    border-radius: 8px;
 }
 .ChoiceBox:first-child .Choice {
     border-radius: 0px;

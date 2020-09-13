@@ -154,13 +154,18 @@ class Color extends React.Component {
             this.props.solveEvent();
         }
     }
+    getCircleClass(i) {
+        let id = this.prefil[i];
+        let squareClass = (id >= 8) ? styles.Square : "";
+        return `${styles.Circle} ${squareClass}`
+    }
     render() {
         let cells = [];
         for (let i=0; i < 9 * 9; i++) {
             if (i in this.prefil) {
                 cells.push(
                     <div key={i} className={`${styles.Cell} ${styles.Fixed}`}>
-                        <div className={styles.Circle}
+                        <div className={this.getCircleClass(i)}
                             style={{
                                 background: this.color[this.prefil[i]]
                             }}
@@ -187,12 +192,13 @@ class Color extends React.Component {
 
             let availableClass = (i < 8) ? styles.Available : "";
             let classNames = `${styles.Choice} ${availableClass}`;
+            let squareClass = (i >= 8)? styles.Square : "";
 
             choices.push(
                 <div key={i} className={styles.ChoiceBox}
                     onClick={() => this.selectChoice(i)}
                 >
-                    <div className={`${classNames} ${highClass}`}
+                    <div className={`${classNames} ${highClass} ${squareClass}`}
                         style={{
                             background: this.color[i]
                         }}
