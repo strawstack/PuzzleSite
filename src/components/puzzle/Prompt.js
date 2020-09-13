@@ -65,8 +65,8 @@ path.fileContent = [
     "two meters after the start of the path. The",
     "second tree, three meters after the first.",
     "Five meters to the third tree from the second.",
-    "Arriving at the third tree, you've walked",
-    "another eight meters. How far to the fourth",
+    "Arriving at the fourth tree, you've walked",
+    "another eight meters. How far to the fifth",
     "and final tree?",
     "You've lost count!",
     "About twice the previous distance",
@@ -194,7 +194,7 @@ let globalCommands = {
         }
     },
     solve: (_this, correct, solution) => {
-        if (solution === "2531442") {
+        if (solution === "2513442") {
             correct();
             return {lines: []};
         } else {
