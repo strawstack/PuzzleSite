@@ -4,11 +4,11 @@ A handful of puzzles built with ReactJS and designed with Figma
 
 # Live Demo
 
-[View Live Demo](https://vibrant-lichterman-973ecb.netlify.app)
+[View Live Demo](https://sideshow.app)
 
 # Screenshot
 
-[![](./screenshot.png)](https://vibrant-lichterman-973ecb.netlify.app)
+[![](./screenshot.png)](https://sideshow.app)
 
 # Created By
 
